@@ -16,6 +16,15 @@
 
 <body>
   <h1 class="vertical-container">TEST PWA</h1>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('static/js/sw.js')
+        .then(function () {
+          console.log('Service Worker Registered');
+        });
+    }
+  </script>
 </body>
 
 </html>
